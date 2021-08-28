@@ -2,11 +2,15 @@ class ShortenersController < ApplicationController
 
   before_action :get_shortener, only: [:show]
 
+  def index
+    @shorteners = Shortener.order(counter: :desc).limit(100)
+  end
+
   def new
-    
   end
 
   def show
+    @shortener.increment!(:counter)
     redirect_to @shortener.full_url_redirect
   end
 

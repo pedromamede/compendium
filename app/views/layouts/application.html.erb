@@ -14,6 +14,10 @@
     <div class="container">
       <div class="row text-center mt-2 mb-3">
         <h1>Compendium - URL Shortener</h1>
+        <div class='row text-center'>
+          <%= link_to "Hottest URL's", shorteners_url, {class: 'link-secondary'} %>
+          <%= link_to "URL Shortener", "/", {class: 'link-secondary'} %>
+        </div>
       </div>
 
       <%= yield %>

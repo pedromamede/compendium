@@ -22,6 +22,7 @@ gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'httparty', '~> 0.18.1'
 gem 'sidekiq', '~> 6.2.2'
 
 
