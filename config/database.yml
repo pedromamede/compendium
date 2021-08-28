@@ -7,7 +7,6 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  database: sample_postgres_development
   pool: 5
   username: <%= ENV['COMPENDIUM_DB_USERNAME']
   password: <%= ENV['COMPENDIUM_DATABASE_PASSWORD']
