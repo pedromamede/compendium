@@ -13,7 +13,13 @@ class ShortenersController < ApplicationController
   def create
     @shortener = Shortener.new(shortener_params)
 
-    @shortener.save
+    respond_to do |format|
+      if @shortener.save
+        format.js { render :create, status: :created }
+      else
+        format.js { render create: @shortener.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private

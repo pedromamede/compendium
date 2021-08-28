@@ -1,0 +1,5 @@
+<% if @shortener&.persisted? %>
+  <div class="row col-10 offset-1">
+    <h3>Your short URL: <%= short_url_display @shortener.short_url %></h3>
+  <div>
+<% end %>
