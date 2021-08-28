@@ -1,0 +1,17 @@
+<%= form_with(model: Shortener.new, remote: true) do |shortener_form| %>
+  <div class="row col-10 offset-1">
+    <div class="input-group mb-3 col-3">
+      <%= shortener_form.text_field :full_url, {class: 'form-control', placeholder: 'Type your full URL here.'} %>
+    </div>
+  </div>
+
+  <div class="row col-10 offset-1">
+    <%= shortener_form.submit "Get your short URL!", {class: 'btn btn-info'} %>
+  </div>
+<% end %>
+
+<% if @shortener&.persisted? %>
+  <div class="row col-10 offset-1">
+    <h3>Your short URL: <%= short_url_display @shortener.short_url %></h3>
+  <div>
+<% end %>

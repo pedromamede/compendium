@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_28_034929) do
+ActiveRecord::Schema.define(version: 2021_08_28_154105) do
 
-  create_table "urls", force: :cascade do |t|
-    t.string "short"
-    t.string "full"
+  create_table "shorteners", force: :cascade do |t|
+    t.string "full_url"
+    t.string "short_url"
     t.string "html_title"
     t.integer "counter"
     t.datetime "expires_in"
