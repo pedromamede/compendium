@@ -1,5 +1,15 @@
 <% if @shortener&.persisted? %>
-  <div class="row col-10 offset-1">
-    <h3>Your short URL: <%= short_url_display @shortener.short_url %></h3>
-  <div>
+  <div class='container short_diplay_box mt-5 mb-5''>
+    <div class='row'>
+      <div class='col-12 text-center'>
+        <h3><%= short_url_display @shortener.short_url %></h3>
+      </div>
+      
+    </div>
+    <div class='row'>
+      <div class='col-12 text-center'>
+        <a class='btn btn-dark mt-4'> Copy </a>
+      </div>
+    </div>
+  </div>
 <% end %>
