@@ -9,7 +9,7 @@ default: &default
   encoding: unicode
   database: sample_postgres_development
   pool: 5
-  username: postgres
+  username: <%= ENV['COMPENDIUM_DB_USERNAME']
   password: <%= ENV['COMPENDIUM_DATABASE_PASSWORD']
 
 development:
