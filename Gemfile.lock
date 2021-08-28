@@ -207,7 +207,7 @@ DEPENDENCIES
   byebug
   httparty (~> 0.18.1)
   listen (~> 3.3)
-  pg
+  pg (~> 1.2.3)
   puma (~> 5.0)
   rails (~> 6.1.4)
   redis (~> 4.0)
