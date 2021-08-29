@@ -5,7 +5,7 @@ application up and running.
 
 Things you may want to cover:
 
-## Ruby version 3.0.1
+* Ruby version 3.0.1
 
 ## Run in development mode:
 
@@ -22,11 +22,11 @@ Things you may want to cover:
   `bundle`
 
   Create and migrate the database\
-  `bundle exec rake db:create`
+  `bundle exec rake db:create`\
   `bundle exec rake db:migrate`
 
-  Start your redis\
-  `redis-server` ()
+  Start your redis server\
+  `redis-server`
 
   Start the webserver\
   `bundle exec rails s`
