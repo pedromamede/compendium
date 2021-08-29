@@ -20,6 +20,9 @@
   `bundle exec rails db:create`\
   `bundle exec rails db:migrate`
 
+  - Assets precompile 
+  `bundle exec yarn`
+
   - Start your redis server\
   `redis-server`
 
