@@ -34,3 +34,14 @@
 ## Running tests
  
  `bundle exec rspec`
+
+ ## Notes (TODO's and insights)
+
+  - Geting rid of the Rails uniqueness validation: rely and handle it by using the database uniq index
+  - Some redis/memory cache for the hottests url's
+  - URL access counter in a different table so it won't lock the table with hight concurrency
+  - Implementing some strategies to the crawler (eg setting the title's already crawled)
+  - Http requests inside a sidekiq job must have a timeout
+  - Implement a dockerfile/container for running the app in development mode
+  - The algorithm to shorten a url should be a non-predictable sequence
+  - Adding the already use url's shorteners in more performatic data structure (eg some tree)
