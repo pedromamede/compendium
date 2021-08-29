@@ -53,6 +53,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'rspec-sidekiq', '~> 3.1.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

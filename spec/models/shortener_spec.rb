@@ -93,4 +93,14 @@ describe Shortener do
       it { expect(subject).to eq 11 }
     end
   end
+
+  describe "#crawl_for_title" do
+    context "after creating a shortener" do
+      it "queue a TitleCrawlerWorker job" do
+        expect {
+          @shortener = Shortener.create(full_url: "google.com")
+        }.to change(Shortener::TitleCrawlerWorker.jobs, :size).by(1)
+      end
+    end
+  end
 end
