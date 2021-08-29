@@ -19,7 +19,7 @@ class UrlUtil
 
   #how many times 'number' is bigger than combination length (eg 26)
   #append the rest of the division as the position of combination array
-  #pass on the result if the division until the result is 0 and the last rest is appended
+  #pass on the result if the division until the result is 0 and the last rest (mod) is appended
   def self.shortening_algorithm number
     return "" if number < 1
     short_url = ""
@@ -30,5 +30,20 @@ class UrlUtil
       break if x == 0
     end
     short_url
+  end
+
+  #same but using recursion instead of a loop
+  def self.shortening_algorithm_recursive number, short_url=""
+    return short_url if number < 1
+    
+    if number-1 < self::SHORTENING_COMBINATIONS.length
+      short_url.prepend(self::SHORTENING_COMBINATIONS[number-1])
+      self.shortening_algorithm_recursive(0, short_url)
+    else
+      x = (number-1)/self::SHORTENING_COMBINATIONS.length
+      r = (number-1)%self::SHORTENING_COMBINATIONS.length
+      short_url.prepend(self::SHORTENING_COMBINATIONS[r])
+      self.shortening_algorithm_recursive(x, short_url)
+    end
   end
 end
