@@ -5,20 +5,24 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.0.1
 
-* System dependencies
+* Run in development mode:
 
-* Configuration
+  Create a .env file 'touch .env'
 
-* Database creation
+  Add those:
+  COMPENDIUM_DB_USERNAME=your_local_db_username
+  COMPENDIUM_DB_PASSWORD=your_local_db_password
 
-* Database initialization
+  bundle
+
+  bundle exec rake db:create
+  bundle exec rake db:migrate
+
+  redis-server
+  bundle exec rails s
+  bundle exec sidekiq
+
 
 * How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
