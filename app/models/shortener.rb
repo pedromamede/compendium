@@ -19,7 +19,11 @@ class Shortener < ApplicationRecord
   private
 
   def generate_short_url
-    self.short_url = UrlUtil.shortening_algorithm( (Shortener.last&.id || 0)+1 )
+    self.short_url = UrlUtil.shortening_algorithm next_number_for_shortening_sequence
+  end
+
+  def next_number_for_shortening_sequence
+    (Shortener.last&.id || 0) + 1
   end
 
   def crawl_for_title
