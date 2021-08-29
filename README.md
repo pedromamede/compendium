@@ -43,6 +43,7 @@
   - Implement a dockerfile/container for running the app in development mode
   - The algorithm to shorten a url should be a non-predictable sequence
   - Adding the already use url's shorteners in more performatic data structure (eg some tree)
+  - Use factories/fixtures for testing
 
 ## Algorithm used for generating the URL short code
   - Given an integer we should find its shortest mapping/combination for an array of N letters (eg ["a", "b", "c"] )
