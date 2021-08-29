@@ -1,6 +1,6 @@
 <% if object.errors.any? %>
   <div class="alert alert-warning mt-5" role="alert">
-    <ul>
+    <ul style='margin-bottom: 0px'>
       <% object.errors.full_messages.each do |msg| %>
         <%= content_tag :li, msg if msg.is_a?(String) %>
       <% end %>
