@@ -19,7 +19,7 @@ class UrlUtil
 
   #how many times 'number' is bigger than combination length (eg 26)
   #append the rest of the division as the position of combination array
-  #pass on the result if the devision until the result is 0 and the last rest is appended
+  #pass on the result if the division until the result is 0 and the last rest is appended
   def self.shortening_algorithm number
     return "" if number < 1
     short_url = ""
