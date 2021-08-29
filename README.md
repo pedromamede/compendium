@@ -29,8 +29,6 @@
   - Start sidekiq\
   `bundle exec sidekiq`
 
-
-
 ## Running tests
  
  `bundle exec rspec`
