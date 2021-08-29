@@ -1,5 +1,4 @@
 class ShortenersController < ApplicationController
-
   before_action :get_shortener, only: [:show]
 
   def index
@@ -29,7 +28,7 @@ class ShortenersController < ApplicationController
   private
 
   def get_shortener
-    @shortener = Shortener.find_by(short_url: params[:short_url])
+    @shortener = Shortener.find_by!(short_url: params[:short_url])
   end
   
   def shortener_params
