@@ -1,9 +1,6 @@
-# README
+# Compendium (latin for 'shortest')
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+  A Url/Link shortener that generates the <b> shortest </b> possible URL.
 
 * Ruby version 3.0.1
 
