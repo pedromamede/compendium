@@ -52,7 +52,7 @@
 
   There's a implementation using for_loop and another using recursion:
 
-  `
+  ```
   def shortening_algorithm number
     return "" if number < 1
     short_url = ""
@@ -64,9 +64,9 @@
     end
     short_url
   end
-  `
+  ```
 
-  `
+  ```
   def shortening_algorithm_recursive number, short_url=""
     return short_url if number < 1
     
@@ -80,4 +80,4 @@
       self.shortening_algorithm_recursive(x, short_url)
     end
   end
-  `
+  ```
