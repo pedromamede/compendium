@@ -37,3 +37,5 @@ Things you may want to cover:
 
 
 ## Running tests
+ 
+ `bundle exec rspec`
