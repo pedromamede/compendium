@@ -5,24 +5,35 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version 3.0.1
+## Ruby version 3.0.1
 
-* Run in development mode:
+## Run in development mode:
 
-  Create a .env file 'touch .env'
+  Create a .env file\
+  
+  `touch .env`
 
-  Add those:
-  COMPENDIUM_DB_USERNAME=your_local_db_username
+  
+  Add these lines:\
+  COMPENDIUM_DB_USERNAME=your_local_db_username\
   COMPENDIUM_DB_PASSWORD=your_local_db_password
 
-  bundle
+  Run bundler\
+  `bundle`
 
-  bundle exec rake db:create
-  bundle exec rake db:migrate
+  Create and migrate the database\
+  `bundle exec rake db:create`
+  `bundle exec rake db:migrate`
 
-  redis-server
-  bundle exec rails s
-  bundle exec sidekiq
+  Start your redis\
+  `redis-server` ()
+
+  Start the webserver\
+  `bundle exec rails s`
+  
+  Start sidekiq\
+  `bundle exec sidekiq`
 
 
-* How to run the test suite
+
+## Running tests
