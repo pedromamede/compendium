@@ -1,4 +1,4 @@
-# Compendium (latin for 'shortest')
+# Compendium (latin for 'shortening')
 
   A URL shortener that generates the <b> shortest </b> possible URL.
 
