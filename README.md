@@ -9,29 +9,29 @@ Things you may want to cover:
 
 ## Run in development mode:
 
-  Create a .env file\
+  - Create a .env file
   
   `touch .env`
 
   
-  Add these lines:\
+  - Add these lines:\
   COMPENDIUM_DB_USERNAME=your_local_db_username\
   COMPENDIUM_DB_PASSWORD=your_local_db_password
 
-  Run bundler\
+  - Run bundler\
   `bundle`
 
-  Create and migrate the database\
+  - Create and migrate the database\
   `bundle exec rake db:create`\
   `bundle exec rake db:migrate`
 
-  Start your redis server\
+  - Start your redis server\
   `redis-server`
 
-  Start the webserver\
+  - Start the webserver\
   `bundle exec rails s`
   
-  Start sidekiq\
+  - Start sidekiq\
   `bundle exec sidekiq`
 
 
