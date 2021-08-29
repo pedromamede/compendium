@@ -43,3 +43,11 @@
   - Implement a dockerfile/container for running the app in development mode
   - The algorithm to shorten a url should be a non-predictable sequence
   - Adding the already use url's shorteners in more performatic data structure (eg some tree)
+
+## Algorithm used for generating the URL short code
+  - Given a integer we should find it's mapping/combination for an array of N letters (eg ["a", "b", "c"] )
+  - The interaction wil get the last letter (on the most right position), using the rest(mod %) of the division between the current integer and the array length
+  - It will then pass on the division between the integer and the array's length as the new integer
+  - When the integer reaches the size of the array length or less, we've found the last position of our array (the first combination letter, at the most left)
+
+  There's a implementation using for_loop and another using recursion
