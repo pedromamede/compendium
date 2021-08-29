@@ -51,7 +51,7 @@
   - It will then pass on the division between the integer and the arrays length as the new integer
   - When the integer reaches the size of the array length or less, we've found the last position of our array (the first combination letter, at the most left)
 
-  There's a implementation using for_loop and another using recursion:
+  There's an implementation using for_loop and another using recursion:
 
   ```
   def shortening_algorithm number
