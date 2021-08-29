@@ -10,11 +10,9 @@ Things you may want to cover:
 ## Run in development mode:
 
   - Create a .env file
-  
   `touch .env`
 
-  
-  - Add these lines:\
+  - Add these lines to the .env file\
   COMPENDIUM_DB_USERNAME=your_local_db_username\
   COMPENDIUM_DB_PASSWORD=your_local_db_password
 
