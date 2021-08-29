@@ -17,8 +17,8 @@
   `bundle`
 
   - Create and migrate the database\
-  `bundle exec rake db:create`\
-  `bundle exec rake db:migrate`
+  `bundle exec rails db:create`\
+  `bundle exec rails db:migrate`
 
   - Start your redis server\
   `redis-server`
