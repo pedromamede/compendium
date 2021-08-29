@@ -35,14 +35,14 @@
 
  ## Notes (TODO's and insights)
 
-  - Geting rid of the Rails uniqueness validation: rely and handle it by using the database uniq index
+  - Getting rid of the Rails uniqueness validation: rely and handle it by using the database uniq index
   - Some redis/memory cache for the hottests url's
-  - URL access counter in a different table so it won't lock the table with hight concurrency
-  - Implementing some strategies to the crawler (eg setting the title's already crawled)
+  - URL access counter in a different table so it won't lock the table with high concurrency
+  - Implementing some strategies to the crawler (eg flagging the titles already crawled)
   - Http requests inside a sidekiq job must have a timeout
   - Implement a dockerfile/container for running the app in development mode
   - The algorithm to shorten a url should be a non-predictable sequence
-  - Adding the already use url's shorteners in more performatic data structure (eg some tree)
+  - Adding the already used url's shorteners in a performatic and proper data structure (eg some tree)
   - Use factories/fixtures for testing
 
 ## Algorithm used for generating the URL short code
