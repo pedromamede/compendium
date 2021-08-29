@@ -5,23 +5,21 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
-
-development:
-  <<: *default
-  database: db/development.sqlite3
-
-test:
-  <<: *default
-  database: db/test.sqlite3
-
-production:
-  <<: *default
   adapter: postgresql
   encoding: unicode
   pool: 5
+
+development:
+  <<: *default
+  database: compendium_development
+
+test:
+  <<: *default
+  database: compendium_test
+
+production:
+  <<: *default
+  
   username: <%= ENV['COMPENDIUM_DB_USERNAME'] %>
   password: <%= ENV['COMPENDIUM_DATABASE_PASSWORD'] %>
   database: compendium_production
