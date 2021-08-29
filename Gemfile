@@ -24,6 +24,7 @@ gem 'redis', '~> 4.0'
 
 gem 'httparty', '~> 0.18.1'
 gem 'sidekiq', '~> 6.2.2'
+gem 'public_suffix', '~> 4.0.6'
 
 
 # Use Active Storage variant
@@ -35,7 +36,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', '~> 2.7.6'
 end
 
 group :development do

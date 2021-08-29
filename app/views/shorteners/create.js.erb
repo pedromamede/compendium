@@ -1,3 +1,5 @@
 <% if @shortener.valid? %>
   $("#short_url_display").html("<%=escape_javascript(render( partial: "short_url_display"))%>");
+<% else %>
+  $("#short_url_display").html("<%=escape_javascript(render( partial: "layouts/errors", locals: {object: @shortener}))%>");
 <% end %>

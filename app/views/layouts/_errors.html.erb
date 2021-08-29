@@ -1,0 +1,9 @@
+<% if object.errors.any? %>
+  <div class="alert alert-warning mt-5" role="alert">
+    <ul>
+      <% object.errors.full_messages.each do |msg| %>
+        <%= content_tag :li, msg if msg.is_a?(String) %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

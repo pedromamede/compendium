@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      shortener:
+        full_url: "URL"
+  validations:
+    commons:
+      invalid_url: "is not a valid URL"
