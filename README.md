@@ -9,7 +9,7 @@ Things you may want to cover:
 
 ## Run in development mode:
 
-  - Create a .env file
+  - Create a .env file\
   `touch .env`
 
   - Add these lines to the .env file\
