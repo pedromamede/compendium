@@ -1,6 +1,6 @@
 # Compendium (latin for 'shortest')
 
-  A Url/Link shortener that generates the <b> shortest </b> possible URL.
+  A URL shortener that generates the <b> shortest </b> possible URL.
 
 * Ruby version 3.0.1
 
