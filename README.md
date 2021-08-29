@@ -4,7 +4,7 @@
 
 * Ruby version 3.0.1
 
-## Run in development mode:
+## Development mode:
 
   - Create a .env file\
   `touch .env`
