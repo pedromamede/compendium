@@ -9,6 +9,10 @@ class Shortener < ApplicationRecord
   
   after_create :crawl_for_title
 
+  def self.top_100
+    Shortener.order("counter DESC NULLS LAST").limit(100)
+  end
+
   def full_url_redirect
     if self.full_url.starts_with? "http"
       self.full_url
