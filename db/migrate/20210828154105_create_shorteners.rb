@@ -4,7 +4,7 @@ class CreateShorteners < ActiveRecord::Migration[6.1]
       t.string :full_url
       t.string :short_url
       t.string :html_title
-      t.integer :counter
+      t.integer :counter, default: 0
       t.datetime :expires_in
 
       t.timestamps

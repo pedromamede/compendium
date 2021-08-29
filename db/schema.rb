@@ -12,14 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2021_08_28_154105) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "shorteners", force: :cascade do |t|
     t.string "full_url"
     t.string "short_url"
     t.string "html_title"
-    t.integer "counter"
+    t.integer "counter", default: 0
     t.datetime "expires_in"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

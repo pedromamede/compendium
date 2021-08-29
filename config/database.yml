@@ -15,7 +15,7 @@ development:
 
 test:
   <<: *default
-  database: compendium_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
