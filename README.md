@@ -46,8 +46,38 @@
 
 ## Algorithm used for generating the URL short code
   - Given an integer we should find its shortest mapping/combination for an array of N letters (eg ["a", "b", "c"] )
-  - The interaction wil get the last letter (on the most right position), using the rest(mod %) of the division between the current integer and the array length
-  - It will then pass on the division between the integer and the array's length as the new integer
+  - The interaction wil get the last letter (at the most right position), using the rest(mod %) of the division between the current integer and the array length (to find the array position of the letter)
+  - It will then pass on the division between the integer and the arrays length as the new integer
   - When the integer reaches the size of the array length or less, we've found the last position of our array (the first combination letter, at the most left)
 
-  There's a implementation using for_loop and another using recursion
+  There's a implementation using for_loop and another using recursion:
+
+  `
+  def shortening_algorithm number
+    return "" if number < 1
+    short_url = ""
+    x = number
+    loop do
+      x, pos = (x-1).divmod(["a", "b", "c"].length)
+      short_url.prepend(["a", "b", "c"][pos])
+      break if x == 0
+    end
+    short_url
+  end
+  `
+
+  `
+  def shortening_algorithm_recursive number, short_url=""
+    return short_url if number < 1
+    
+    if number-1 < ["a", "b", "c"].length
+      short_url.prepend(["a", "b", "c"][number-1])
+      self.shortening_algorithm_recursive(0, short_url)
+    else
+      x = (number-1)/["a", "b", "c"].length
+      r = (number-1)%["a", "b", "c"].length
+      short_url.prepend(["a", "b", "c"][r])
+      self.shortening_algorithm_recursive(x, short_url)
+    end
+  end
+  `
