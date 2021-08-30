@@ -36,6 +36,10 @@
  
  `bundle exec rspec`
 
+ or\
+
+ `bundle exec rspec -fd`
+
  ## Notes (TODO's and insights)
 
   - Getting rid of the Rails uniqueness validation: rely and handle it by using the database uniq index
