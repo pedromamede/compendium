@@ -36,7 +36,7 @@
  
  `bundle exec rspec`
 
- or\
+ or
 
  `bundle exec rspec -fd`
 
