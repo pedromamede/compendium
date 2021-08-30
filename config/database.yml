@@ -13,12 +13,14 @@ development:
   <<: *default
   database: compendium_development
   username: <%= ENV['COMPENDIUM_DB_USERNAME'] %>
-  password: <%= ENV['COMPENDIUM_DATABASE_PASSWORD'] %>
+  password: <%= ENV['COMPENDIUM_DB_PASSWORD'] %>
   
 
 test:
   <<: *default
   database: compendium_test
+  username: <%= ENV['COMPENDIUM_DB_USERNAME'] %>
+  password: <%= ENV['COMPENDIUM_DB_PASSWORD'] %>
 
 production:
   <<: *default
