@@ -48,13 +48,12 @@
   - Implementing some strategies to the crawler (eg flagging the titles already crawled)
   - Http requests inside a sidekiq job must have a timeout
   - Implement a docker/docker-compose for running the app in development mode
-  - Adding the already used url's shorteners in a performatic and proper data structure (eg some tree)
   - Use factories/fixtures for testing
   - I am using a base26 for shortening the url (form "a" to "z") but could be a base36(a..z..0..9) or even base 62/6x if we use case sensitive letters and special characters 
 
 ## Algorithm used for generating the URL short code
   - Given an integer we should find its shortest mapping/combination for an array of N letters (eg ["a", "b", "c"] )
-  - The interaction wil get the last letter (at the most right position), using the rest(mod %) of the division between the current integer and the array length (to find the array position of the letter)
+  - A loop or recursion wil get the last letter (at the most right position), using the rest(mod %) of the division between the current integer and the array length (to find the array position of the letter)
   - It will then pass on the division between the integer and the arrays length as the new integer
   - When the integer reaches the size of the array length or less, we've found the last position of our array (the first combination letter, at the most left)
 
